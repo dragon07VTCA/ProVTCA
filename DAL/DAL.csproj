@@ -11,5 +11,14 @@
   <ItemGroup>
     <ProjectReference Include="..\Persistence\Persistence.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=".\ConnectionString.txt">
+      <Link>.\ConnectionString.txt</Link>
+    </EmbeddedResource>
+    <None Include=".\ConnectionString.txt" CopyToOutputDirectory="Always">
+      <Pack>True</Pack>
+      <PackagePath>.</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

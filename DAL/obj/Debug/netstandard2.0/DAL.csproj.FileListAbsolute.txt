@@ -1,0 +1,12 @@
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\DAL\bin\Debug\netstandard2.0\DAL.dll
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\DAL\bin\Debug\netstandard2.0\DAL.pdb
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\DAL\bin\Debug\netstandard2.0\Persistence.dll
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\DAL\bin\Debug\netstandard2.0\Persistence.pdb
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\DAL\obj\Debug\netstandard2.0\DAL.csprojResolveAssemblyReference.cache
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\DAL\obj\Debug\netstandard2.0\DAL.dll
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\DAL\obj\Debug\netstandard2.0\DAL.pdb
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\DAL\bin\Debug\netstandard2.0\ConnectionString.txt
