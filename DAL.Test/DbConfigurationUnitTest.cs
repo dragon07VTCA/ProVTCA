@@ -14,7 +14,7 @@ namespace DAL.Test
         }
 
         [Theory]
-        [InlineData("server=localhost;user id=vtca;password=vtcacademy;port=3306;database=OrderDB;SslMode=None")]
+        [InlineData("server=localhost;user id=root;password=07101999;port=3306;database=DB;SslMode=None")]
         public void OpenConnectionWithStringTest(string connectionString)
         {
             Assert.NotNull(DbConfiguration.OpenConnection(connectionString));

@@ -51,6 +51,7 @@ create trigger tg_CheckAmount
         end if;
     end $$
 delimiter ;
+
 insert into Employee(full_name,Phone_number,User_name,User_Password)
 values ('Le Truong Giang','0978895541','GiangVTCA','VTCA'),
       ('Do Xuan Truong' , '0967824628','TruongVTCA','VTCA');

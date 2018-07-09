@@ -1,0 +1,1 @@
+server=localhost;user id=root;password=07101999;port=3306;database=DB;SslMode=None

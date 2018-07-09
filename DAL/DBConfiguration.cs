@@ -6,6 +6,7 @@ namespace DAL
 {
     public class DbConfiguration
     {
+        private static MySqlConnection connection  = null;
         public static MySqlConnection OpenConnection()
         {
             try
@@ -38,6 +39,47 @@ namespace DAL
             {
                 return null;
             }
+        }
+        public static void CloseConnection()
+        {
+            if (connection != null) connection.Close();
+        }
+        public static bool ExecTransaction(List<string> queries)
+        {
+            bool result = true;
+            OpenConnection();
+            MySqlCommand command = connection.CreateCommand();
+            MySqlTransaction trans = connection.BeginTransaction();
+
+            command.Connection = connection;
+            command.Transaction = trans;
+
+            try
+            {
+                foreach (var query in queries)
+                {
+                    command.CommandText = query;
+                    command.ExecuteNonQuery();
+                    trans.Commit();
+                }
+                result = true;
+            }
+            catch
+            {
+                result = false;
+                try
+                {
+                    trans.Rollback();
+                }
+                catch
+                {
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return result;
         }
     }
 }

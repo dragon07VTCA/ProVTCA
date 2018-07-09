@@ -8,87 +8,48 @@ namespace DAL
     {
         public bool CreateOrder(Orders order)
         {
-            if(order == null || order.BooksList == null || order.BooksList.Count == 0)
+            if (order == null || order.BooksList == null || order.BooksList.Count == 0)
             {
                 return false;
             }
-            bool result = true;
             MySqlConnection connection = DbConfiguration.OpenConnection();
             MySqlCommand cmd = connection.CreateCommand();
             cmd.Connection = connection;
             try
             {
-            //Khoa cap nhat tat ca table , bao dam tinh toan ven du lieu
-            cmd.CommandText = "lock tables Employees write, Orders write, Books write, List_Order_ID write;";
-            cmd.ExecuteNonQuery();
-            MySqlTransaction trans = connection.BeginTransaction();
-            cmd.Transaction = trans;
-            MySqlDataReader reader = null;
-            //Nhập dữ liệu cho bảng Order
-            cmd.CommandText = "insert into Orders(ID_Book,Note) values (@ID_Book, @Note);";
-            cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@ID_Book",order.OrderBooks.ID_Book);
-            cmd.Parameters.AddWithValue("@Note",OrdersNote.CREATE_NEW_ORDER);
-            cmd.ExecuteNonQuery();
-            //Lấy Order_ID mới 
-            cmd.CommandText = "select LAST_INSERT_ID() as ID_Order");
-             if (reader.Read())
+                //Khoa cap nhat tat ca table , bao dam tinh toan ven du lieu
+                cmd.CommandText = "lock tables Employees write, Orders write, Books write, List_Order_ID write;";
+                cmd.ExecuteNonQuery();
+                MySqlTransaction trans = connection.BeginTransaction();
+                cmd.Transaction = trans;
+                // Nhap du lieu cho bang Order
+                cmd.CommandText = "insert into Orders(ID_Order , ID_E , Creation_Time) values (@ID_Order , @ID_E , @Creation_Time)";
+                cmd.Parameters.AddWithValue("@ID_Order",order.ID_Order);
+                cmd.Parameters.AddWithValue("@ID_E",order.ID_E);
+                cmd.Parameters.AddWithValue("@Creation_Time",order.creation_time);
+                //Nhập dữ liệu cho bảng OrderDetail
+                for (int i = 0; i < order.BooksList.Count; i++)
                 {
-                    order.OrderId = reader.GetInt32("order_id");
-                }
-                reader.Close();
-            //Nhập vào bảng 
-             foreach (var item in order.ID_Book)
-                {
-                    if (Books.ID_Book == null || Books.Amount <= 0)
-                    {
-                        throw new Exception("Not Exists Item");
-                    }
-            //Lấy unit_price Order_Details
-            cmd.CommandText = "select unit_price from where ID_Book=@ID_Book";
-            cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@ID_Book",Books.ID_Book);
-            reader = cmd.ExecuteReader();
-             if (!reader.Read())
-                    {
-                        throw new Exception("Not Exists Item");
-                    }
-                    item.ItemPrice = reader.GetDecimal("unit_price");
-                    reader.Close();
-        
-        //Nhập dữ liệu vào bảng Order_Details
-         cmd.CommandText = @"insert into OrderDetails(ID_order,ID_Book,unit_price, quantity) values
-                            (" Orders.ID_order + "," + Books.ID_Book + "," + Books.unit_price + "," + Books.Amount + ");";
-         cmd.ExecuteNonQuery();
-         //Cập nhập số lượng mới của sách
-         cmd.CommandText = "update Books set amount=amount-@quantity where Books_ID=" + Books.ID_Book + ";";
-          cmd.Parameters.Clear();
-          cmd.Parameters.AddWithValue("@quantity", Books.Amount);
-          cmd.ExecuteNonQuery();
-          }
-          //commit transaction
-                trans.Commit();
-                result = true;
-        }   
-            catch (Exception ex)
-            {
-                  Console.WriteLine(ex.Message);
-                result = false;
-                try
-                {
-                    trans.Rollback();
-                }
-                catch
-                {
+                    cmd.CommandText = "insert into OrderDetails(ID_Order,ID_Book,unit_Price) values (@ID_Order, @ID_Book, @unit_Price);";
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@ID_Order", order.ID_Order);
+                    cmd.Parameters.AddWithValue("@ID_Book", order.BooksList[i].book.ID_Book);
+                    cmd.Parameters.AddWithValue("@unit_Price", order.BooksList[i].quantity*order.BooksList[i].book.price);
                 }
             }
-             finally
-            {   
-                //Mở khóa tất cả các bảng
+            catch
+            {
+
+            }
+            finally
+            {
                 cmd.CommandText = "unlock tables;";
                 cmd.ExecuteNonQuery();
-                DBHelper.CloseConnection();
+                DbConfiguration.CloseConnection();
             }
-            return result;
+
+            return true;
+        }
     }
+
 }
