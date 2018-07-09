@@ -183,11 +183,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\Persistence.csproj",
       "projectName": "Persistence",
-      "projectPath": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\Persistence.csproj",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\Persistence.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

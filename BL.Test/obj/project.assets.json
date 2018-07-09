@@ -6101,23 +6101,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\XuanTruong\\.nuget\\packages\\": {},
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\test\\ProVTCA\\BL.Test\\BL.Test.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\BL.Test\\BL.Test.csproj",
       "projectName": "BL.Test",
-      "projectPath": "d:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\test\\ProVTCA\\BL.Test\\BL.Test.csproj",
-      "packagesPath": "C:\\Users\\XuanTruong\\.nuget\\packages\\",
-      "outputPath": "d:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\test\\ProVTCA\\BL.Test\\obj\\",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\BL.Test\\BL.Test.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\BL.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\XuanTruong\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -6128,8 +6128,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "d:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\test\\ProVTCA\\BL\\BL.csproj": {
-              "projectPath": "d:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\test\\ProVTCA\\BL\\BL.csproj"
+            "C:\\Users\\ASUS\\Desktop\\ProVTCA\\BL\\BL.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\BL\\BL.csproj"
             }
           }
         }

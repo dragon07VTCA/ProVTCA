@@ -7,3 +7,12 @@ D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\te
 D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\Persistence\obj\Debug\netstandard2.0\Persistence.AssemblyInfo.cs
 D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\Persistence\obj\Debug\netstandard2.0\Persistence.dll
 D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\Persistence\obj\Debug\netstandard2.0\Persistence.pdb
+C:\Users\ASUS\Desktop\ProVTCA\Persistence\bin\Debug\netstandard2.0\Persistence.deps.json
+C:\Users\ASUS\Desktop\ProVTCA\Persistence\bin\Debug\netstandard2.0\Persistence.dll
+C:\Users\ASUS\Desktop\ProVTCA\Persistence\bin\Debug\netstandard2.0\Persistence.pdb
+C:\Users\ASUS\Desktop\ProVTCA\Persistence\obj\Debug\netstandard2.0\Persistence.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\ProVTCA\Persistence\obj\Debug\netstandard2.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\ProVTCA\Persistence\obj\Debug\netstandard2.0\Persistence.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\ProVTCA\Persistence\obj\Debug\netstandard2.0\Persistence.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\ProVTCA\Persistence\obj\Debug\netstandard2.0\Persistence.dll
+C:\Users\ASUS\Desktop\ProVTCA\Persistence\obj\Debug\netstandard2.0\Persistence.pdb

@@ -1610,11 +1610,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\BL\\BL.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\BL\\BL.csproj",
       "projectName": "BL",
-      "projectPath": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\BL\\BL.csproj",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\BL\\BL.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\BL\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1631,11 +1631,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "c:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL\\DAL.csproj": {
-              "projectPath": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL\\DAL.csproj"
+            "C:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL\\DAL.csproj"
             },
-            "c:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\Persistence.csproj": {
-              "projectPath": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\Persistence.csproj"
+            "C:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\Persistence.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\Persistence.csproj"
             }
           }
         }
