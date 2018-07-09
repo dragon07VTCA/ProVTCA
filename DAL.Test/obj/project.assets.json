@@ -6083,23 +6083,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\XuanTruong\\.nuget\\packages\\": {},
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\test\\ProVTCA\\DAL.Test\\DAL.Test.csproj",
+      "projectUniqueName": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL.Test\\DAL.Test.csproj",
       "projectName": "DAL.Test",
-      "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\test\\ProVTCA\\DAL.Test\\DAL.Test.csproj",
-      "packagesPath": "C:\\Users\\XuanTruong\\.nuget\\packages\\",
-      "outputPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\test\\ProVTCA\\DAL.Test\\obj\\",
+      "projectPath": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL.Test\\DAL.Test.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\XuanTruong\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -6110,11 +6110,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\test\\ProVTCA\\DAL\\DAL.csproj": {
-              "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\test\\ProVTCA\\DAL\\DAL.csproj"
+            "c:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL\\DAL.csproj": {
+              "projectPath": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL\\DAL.csproj"
             },
-            "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\test\\ProVTCA\\Persistence\\Persistence.csproj": {
-              "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\test\\ProVTCA\\Persistence\\Persistence.csproj"
+            "c:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\Persistence.csproj": {
+              "projectPath": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\Persistence.csproj"
             }
           }
         }
