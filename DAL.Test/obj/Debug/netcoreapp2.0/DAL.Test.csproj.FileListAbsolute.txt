@@ -17,3 +17,5 @@ D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\te
 D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\DAL.Test\obj\Debug\netcoreapp2.0\DAL.Test.dll
 D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\DAL.Test\obj\Debug\netcoreapp2.0\DAL.Test.pdb
 D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\test\ProVTCA\DAL.Test\bin\Debug\netcoreapp2.0\ConnectionString.txt
+C:\Users\ASUS\Desktop\ProVTCA\DAL.Test\obj\Debug\netcoreapp2.0\DAL.Test.dll
+C:\Users\ASUS\Desktop\ProVTCA\DAL.Test\obj\Debug\netcoreapp2.0\DAL.Test.pdb

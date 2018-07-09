@@ -6089,11 +6089,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL.Test\\DAL.Test.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL.Test\\DAL.Test.csproj",
       "projectName": "DAL.Test",
-      "projectPath": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL.Test\\DAL.Test.csproj",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL.Test\\DAL.Test.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL.Test\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6110,11 +6110,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "c:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL\\DAL.csproj": {
-              "projectPath": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL\\DAL.csproj"
+            "C:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\DAL\\DAL.csproj"
             },
-            "c:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\Persistence.csproj": {
-              "projectPath": "c:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\Persistence.csproj"
+            "C:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\Persistence.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Desktop\\ProVTCA\\Persistence\\Persistence.csproj"
             }
           }
         }

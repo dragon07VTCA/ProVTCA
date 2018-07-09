@@ -25,9 +25,9 @@ namespace DAL
             cmd.Transaction = trans;
             MySqlDataReader reader = null;
             //Nhập dữ liệu cho bảng Order
-            cmd.CommandText = "insert into Orders(Book_ID,Note) values (@Book_ID, @Note);";
+            cmd.CommandText = "insert into Orders(ID_Book,Note) values (@ID_Book, @Note);";
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Book_ID",order.OrderBooks.Book_ID);
+            cmd.Parameters.AddWithValue("@ID_Book",order.OrderBooks.ID_Book);
             cmd.Parameters.AddWithValue("@Note",OrdersNote.CREATE_NEW_ORDER);
             cmd.ExecuteNonQuery();
             //Lấy Order_ID mới 
@@ -38,16 +38,16 @@ namespace DAL
                 }
                 reader.Close();
             //Nhập vào bảng 
-             foreach (var item in order.ItemsList)
+             foreach (var item in order.ID_Book)
                 {
-                    if (Books.Book_ID == null || Books.Amount <= 0)
+                    if (Books.ID_Book == null || Books.Amount <= 0)
                     {
                         throw new Exception("Not Exists Item");
                     }
             //Lấy unit_price Order_Details
-            cmd.CommandText = "select unit_price from where Book_ID=@Book_ID";
+            cmd.CommandText = "select unit_price from where ID_Book=@ID_Book";
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@Book_ID",Books.Book_ID);
+            cmd.Parameters.AddWithValue("@ID_Book",Books.ID_Book);
             reader = cmd.ExecuteReader();
              if (!reader.Read())
                     {
@@ -58,10 +58,10 @@ namespace DAL
         
         //Nhập dữ liệu vào bảng Order_Details
          cmd.CommandText = @"insert into OrderDetails(ID_order,ID_Book,unit_price, quantity) values
-                            (" Orders.ID_order + "," + Books.Book_ID + "," + Books.unit_price + "," + Books.Amount + ");";
+                            (" Orders.ID_order + "," + Books.ID_Book + "," + Books.unit_price + "," + Books.Amount + ");";
          cmd.ExecuteNonQuery();
          //Cập nhập số lượng mới của sách
-         cmd.CommandText = "update Books set amount=amount-@quantity where Books_ID=" + Books.Book_ID + ";";
+         cmd.CommandText = "update Books set amount=amount-@quantity where Books_ID=" + Books.ID_Book + ";";
           cmd.Parameters.Clear();
           cmd.Parameters.AddWithValue("@quantity", Books.Amount);
           cmd.ExecuteNonQuery();
