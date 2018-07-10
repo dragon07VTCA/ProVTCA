@@ -30,10 +30,11 @@ namespace DAL
                 //Nhập dữ liệu cho bảng OrderDetail
                 for (int i = 0; i < order.BooksList.Count; i++)
                 {
-                    cmd.CommandText = "insert into OrderDetails(ID_Order,ID_Book,unit_Price) values (@ID_Order, @ID_Book, @unit_Price);";
+                    cmd.CommandText = "insert into OrderDetails(ID_Order,ID_Book,unit_Price,quantity) values (@ID_Order, @ID_Book, @unit_Price,@quantity);";
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@ID_Order", order.ID_Order);
                     cmd.Parameters.AddWithValue("@ID_Book", order.BooksList[i].book.ID_Book);
+                    cmd.Parameters.AddWithValue("@quantity",order.BooksList[i].quantity);
                     cmd.Parameters.AddWithValue("@unit_Price", order.BooksList[i].quantity*order.BooksList[i].book.price);
                 }
             }
