@@ -12,7 +12,7 @@ namespace DAL
             try
             {
                 string connectionString;
-                FileStream fileStream = new FileStream("ConnectionString.txt", FileMode.Open);
+                FileStream fileStream = File.OpenRead("ConnectionString.txt");
                 using (StreamReader reader = new StreamReader(fileStream))
                 {
                     connectionString = reader.ReadLine();

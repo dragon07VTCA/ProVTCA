@@ -15,8 +15,7 @@ namespace DAL
             {
                 connection.Open();
             }
-            query = @"select id_e, full_name, phone_number,address
-                        from Employee where user_name=" + user_name + "and password=" + password +";";
+            query = $"select ID_E, full_name, Phone_number,Address from Employees where User_name='{user_name}' and User_Password='{password}';";
             reader = (new MySqlCommand(query,connection)).ExecuteReader();
             Employees c = null;
             if (reader.Read())
@@ -28,8 +27,7 @@ namespace DAL
         }
         internal Employees GetEmployeeByUserPassword(string user_name , string password,MySqlConnection connection)
         {
-            query = @"select id_e, full_name, phone_number,address
-                        from Employee where user_name=" + user_name + "and password=" + password +";";
+            query = $"select ID_E, full_name, Phone_number,Address from Employees where User_name='{user_name}' and User_Password='{password}';";
             Employees c = null;
             reader = (new MySqlCommand(query,connection)).ExecuteReader();
             if (reader.Read())
@@ -42,10 +40,10 @@ namespace DAL
         private Employees GetEmployee(MySqlDataReader reader)
         {
             Employees c = new Employees();
-            c.ID_E = reader.GetInt32("id_e");
+            c.ID_E = reader.GetInt32("ID_E");
             c.full_name = reader.GetString("full_name");
-            c.phone_number = reader.GetString("phone_number");
-            c.address = reader.GetString("address");
+            c.phone_number = reader.GetString("Phone_number");
+            c.address = reader.GetString("Address");
             return c;
         }
     }

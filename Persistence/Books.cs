@@ -8,7 +8,7 @@ namespace Persistence
         public string book_title {get; set;}
         public string author {get; set;}
         public int amount {get;set;}
-        public decimal price {get;set;}
+        public decimal unit_price {get;set;}
         public override bool Equals(object obj)
         {
             if(obj is Books)

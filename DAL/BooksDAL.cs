@@ -13,14 +13,13 @@ namespace DAL
         {
             connection = DbConfiguration.OpenConnection();
         }
-        public Books GetBookById(int id_book)
+        public Books GetBookById(int ID_Book)
         {
             if(connection.State == System.Data.ConnectionState.Closed)
             {
                 connection.Open();
             }
-            query = @"select id_book, book_title, author, amount, price
-                        from Books where id_book=" + id_book + ";";
+            query = $"select ID_Book, book_title, author, amount, unit_price from Books where id_book='{ID_Book}';";
             MySqlCommand command = new MySqlCommand(query, connection);
             reader = command.ExecuteReader();
             Books book = null;
@@ -35,11 +34,11 @@ namespace DAL
         private Books GetBook(MySqlDataReader reader)
         {
             Books book = new Books();
-            book.ID_Book = reader.GetInt32("id_book");
+            book.ID_Book = reader.GetInt32("ID_Book");
             book.book_title = reader.GetString("book_title");
             book.author = reader.GetString("author");
             book.amount = reader.GetInt32("amount");
-            book.price = reader.GetDecimal("price");
+            book.unit_price = reader.GetDecimal("unit_price");
             return book;
         }
         private List<Books> GetBook(MySqlCommand command)
