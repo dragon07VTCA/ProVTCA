@@ -36,6 +36,7 @@ namespace DAL
                     cmd.Parameters.AddWithValue("@ID_Book", order.BooksList[i].book.ID_Book);
                     cmd.Parameters.AddWithValue("@quantity",order.BooksList[i].quantity);
                     cmd.Parameters.AddWithValue("@unit_Price", order.BooksList[i].quantity*order.BooksList[i].book.price);
+                    cmd.CommandText = "update Books set amount = amount - " + order.BooksList[i].quantity + " where id_book =" + order.BooksList[i].book.ID_Book + ";";
                 }
             }
             catch
