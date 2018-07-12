@@ -67,9 +67,6 @@ values ('Ngu van','A','12000','100'),
        ('Hinh hoc','A','12000','100'),
        ('Cong nghe ','A','10000','100'),
        ('Lich su','A','14000','100');
-insert into customers(Full_name,Phone_number,address)
-value ('Le Truong Giang',0978895541,'Vinh phuc'),
-	  ('Do Xuan Truong',0934521467,'Ha Noi');
 insert into Orders(ID_Book,ID_E,Note)
 values(1,1,'khong'),(1,1,'Khong'),(2,2,'Khong');
 insert into Orderdetails(ID_order,ID_Book,unit_price,quantity)
