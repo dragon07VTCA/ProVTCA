@@ -18,12 +18,6 @@ author varchar(225) not null,
 unit_price decimal(20,2) default 0,
 amount int(10) not null
 );
-create table customers(
-ID_customer int(11) auto_increment , constraint PK_ID_customer primary key(ID_customer),
-Full_name varchar(225) not null,
-Phone_number int(20) not null,
-Address varchar(225) not null
-);
 
 create table Orders(
 ID_Order int(11) auto_increment , constraint PK_ID_Order primary key(ID_Order),
@@ -73,9 +67,6 @@ values ('Ngu van','A','12000','100'),
        ('Hinh hoc','A','12000','100'),
        ('Cong nghe ','A','10000','100'),
        ('Lich su','A','14000','100');
-insert into customers(Full_name,Phone_number,address)
-value ('Le Truong Giang',0978895541,'Vinh phuc'),
-	  ('Do Xuan Truong',0934521467,'Ha Noi');
 insert into Orders(ID_Book,ID_E,Note)
 values(1,1,'khong'),(1,1,'Khong'),(2,2,'Khong');
 insert into Orderdetails(ID_order,ID_Book,unit_price,quantity)

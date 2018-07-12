@@ -28,3 +28,9 @@ D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Pr
 D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\DAL\bin\Debug\netstandard2.0\DAL.pdb
 D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\DAL\bin\Debug\netstandard2.0\Persistence.dll
 D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\DAL\bin\Debug\netstandard2.0\Persistence.pdb
+C:\Users\ASUS\Desktop\ProVTCA\DAL\bin\Debug\netstandard2.0\ConnectionString.txt
+C:\Users\ASUS\Desktop\ProVTCA\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+C:\Users\ASUS\Desktop\ProVTCA\DAL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\ASUS\Desktop\ProVTCA\DAL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\ASUS\Desktop\ProVTCA\DAL\bin\Debug\netstandard2.0\Persistence.dll
+C:\Users\ASUS\Desktop\ProVTCA\DAL\bin\Debug\netstandard2.0\Persistence.pdb
