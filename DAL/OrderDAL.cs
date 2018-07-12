@@ -6,11 +6,11 @@ namespace DAL
 {
     public class OrderDAL
     {
-        public bool CreateOrder(Orders order)
+        public Orders AddOrder(Orders order)
         {
             if (order == null || order.BooksList == null || order.BooksList.Count == 0)
             {
-                return false;
+                return null;
             }
             MySqlConnection connection = DbConfiguration.OpenConnection();
             MySqlCommand cmd = connection.CreateCommand();
@@ -57,7 +57,7 @@ namespace DAL
                 DbConfiguration.CloseConnection();
             }
 
-            return true;
+            return order;
         }
     }
 

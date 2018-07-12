@@ -18,12 +18,6 @@ author varchar(225) not null,
 unit_price decimal(20,2) default 0,
 amount int(10) not null
 );
-create table customers(
-ID_customer int(11) auto_increment , constraint PK_ID_customer primary key(ID_customer),
-Full_name varchar(225) not null,
-Phone_number int(20) not null,
-Address varchar(225) not null
-);
 
 create table Orders(
 ID_Order int(11) auto_increment , constraint PK_ID_Order primary key(ID_Order),

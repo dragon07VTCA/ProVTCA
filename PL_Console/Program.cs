@@ -8,7 +8,7 @@ namespace PL_Console
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("aBCCCCC");   
+            
         }
     }
 }

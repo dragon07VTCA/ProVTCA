@@ -4,7 +4,7 @@ namespace Persistence
 {
     public class OrderDetails
     {
-        public Books book;
+        public Books book = new Books();
         public int quantity;
     }
     public static class OrderStatus
@@ -13,7 +13,7 @@ namespace Persistence
     public class Orders
     {
         public int? ID_Order{get;set;}
-        public Employees ID_E{get; set;}
+        public int ID_E{get; set;}
         public DateTime creation_time{get; set;}
         public string note {get; set;}
         public int? status{get; set;}
