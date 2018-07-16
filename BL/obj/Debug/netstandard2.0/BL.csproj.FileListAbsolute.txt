@@ -1,26 +1,14 @@
-D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\BL\bin\Debug\netstandard2.0\ConnectionString.txt
-D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\BL\bin\Debug\netstandard2.0\BL.deps.json
-D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\BL\bin\Debug\netstandard2.0\BL.dll
-D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\BL\bin\Debug\netstandard2.0\BL.pdb
-D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\BL\bin\Debug\netstandard2.0\DAL.dll
-D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\BL\bin\Debug\netstandard2.0\Persistence.dll
-D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\BL\bin\Debug\netstandard2.0\DAL.pdb
-D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\BL\bin\Debug\netstandard2.0\Persistence.pdb
-D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
-D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
-D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
-D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\BL\obj\Debug\netstandard2.0\BL.dll
-D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\ProVTCA\BL\obj\Debug\netstandard2.0\BL.pdb
-C:\Users\ASUS\Desktop\ProVTCA\BL\bin\Debug\netstandard2.0\ConnectionString.txt
-C:\Users\ASUS\Desktop\ProVTCA\BL\bin\Debug\netstandard2.0\BL.deps.json
-C:\Users\ASUS\Desktop\ProVTCA\BL\bin\Debug\netstandard2.0\BL.dll
-C:\Users\ASUS\Desktop\ProVTCA\BL\bin\Debug\netstandard2.0\BL.pdb
-C:\Users\ASUS\Desktop\ProVTCA\BL\bin\Debug\netstandard2.0\DAL.dll
-C:\Users\ASUS\Desktop\ProVTCA\BL\bin\Debug\netstandard2.0\Persistence.dll
-C:\Users\ASUS\Desktop\ProVTCA\BL\bin\Debug\netstandard2.0\DAL.pdb
-C:\Users\ASUS\Desktop\ProVTCA\BL\bin\Debug\netstandard2.0\Persistence.pdb
-C:\Users\ASUS\Desktop\ProVTCA\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
-C:\Users\ASUS\Desktop\ProVTCA\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
-C:\Users\ASUS\Desktop\ProVTCA\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
-C:\Users\ASUS\Desktop\ProVTCA\BL\obj\Debug\netstandard2.0\BL.dll
-C:\Users\ASUS\Desktop\ProVTCA\BL\obj\Debug\netstandard2.0\BL.pdb
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\BL\bin\Debug\netstandard2.0\ConnectionString.txt
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\BL\bin\Debug\netstandard2.0\BL.deps.json
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\BL\bin\Debug\netstandard2.0\BL.dll
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\BL\bin\Debug\netstandard2.0\BL.pdb
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\BL\bin\Debug\netstandard2.0\DAL.dll
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\BL\bin\Debug\netstandard2.0\Persistence.dll
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\BL\bin\Debug\netstandard2.0\Persistence.pdb
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\BL\bin\Debug\netstandard2.0\DAL.pdb
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\BL\obj\Debug\netstandard2.0\BL.dll
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\BL\obj\Debug\netstandard2.0\BL.pdb
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\BL\obj\Debug\netstandard2.0\BL.csprojResolveAssemblyReference.cache

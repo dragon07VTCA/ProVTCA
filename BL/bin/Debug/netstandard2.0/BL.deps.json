@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "e8ac922c6ce9ad9a5d0234dd5a004a34dfcd14ca"
+    "signature": "55c3648c3168802c034a6a2d9a6512873ab7f3f1"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,7 +10,7 @@
       "BL/1.0.0": {
         "dependencies": {
           "DAL": "1.0.0",
-          "NETStandard.Library": "2.0.0",
+          "NETStandard.Library": "2.0.1",
           "Persistence": "1.0.0"
         },
         "runtime": {
@@ -29,7 +29,7 @@
           "lib/netstandard2.0/MySql.Data.dll": {}
         }
       },
-      "NETStandard.Library/2.0.0": {
+      "NETStandard.Library/2.0.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
@@ -228,12 +228,12 @@
       "path": "mysql.data/6.10.7",
       "hashPath": "mysql.data.6.10.7.nupkg.sha512"
     },
-    "NETStandard.Library/2.0.0": {
+    "NETStandard.Library/2.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
-      "path": "netstandard.library/2.0.0",
-      "hashPath": "netstandard.library.2.0.0.nupkg.sha512"
+      "sha512": "sha512-oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
+      "path": "netstandard.library/2.0.1",
+      "hashPath": "netstandard.library.2.0.1.nupkg.sha512"
     },
     "System.Collections/4.0.11": {
       "type": "package",
