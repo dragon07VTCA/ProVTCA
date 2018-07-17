@@ -1,0 +1,4 @@
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\DAL.Test\obj\Debug\netcoreapp2.0\DAL.Test.csprojResolveAssemblyReference.cache
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\DAL.Test\obj\Debug\netcoreapp2.0\DAL.Test.csproj.CoreCompileInputs.cache
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\DAL.Test\obj\Debug\netcoreapp2.0\DAL.Test.AssemblyInfoInputs.cache
+D:\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\LapTrinh\Project\Code\Project\DAL.Test\obj\Debug\netcoreapp2.0\DAL.Test.AssemblyInfo.cs

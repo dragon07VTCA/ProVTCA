@@ -12,8 +12,8 @@ namespace Persistence
         public const int create_new_order = 1;    }
     public class Orders
     {
-        public int? ID_Order{get;set;}
-        public int ID_E{get; set;}
+        public int ID_Order{get;set;}
+        public Employees ID_E{get; set;}
         public DateTime creation_time{get; set;}
         public string note {get; set;}
         public int? status{get; set;}

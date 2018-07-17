@@ -4,7 +4,7 @@ namespace Persistence
 {
     public class Books
     {
-        public int? ID_Book{get; set ;}
+        public int ID_Book{get; set ;}
         public string book_title {get; set;}
         public string author {get; set;}
         public int amount {get;set;}
