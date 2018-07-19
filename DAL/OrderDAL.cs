@@ -37,7 +37,7 @@ namespace DAL
                      {order.BooksList[i].book.ID_Book},
                      {order.BooksList[i].quantity * order.BooksList[i].book.unit_price},
                      {order.BooksList[i].quantity})";
-                     cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
                     cmd.CommandText = $"update Books set amount = amount - {order.BooksList[i].quantity} where ID_Book = {order.BooksList[i].book.ID_Book};";
                     cmd.ExecuteNonQuery();
                     // cmd.CommandText = "insert into OrderDetails(ID_Order,ID_Book,unit_price,quantity) values (@ID_Order, @ID_Book, @unit_price,@quantity);";                    

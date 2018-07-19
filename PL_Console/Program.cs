@@ -22,19 +22,19 @@ namespace PL_Console
             get { return selectChar; }
             set
             {
-                while (true)
-                {
-                    if (string.Compare(value, "\n") != 0 || value == "Co" || value == "co" || value == "Khong" || value == "khong")
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("- Ky tu ban nhap khong chinh xac ! Vui long nhap lai !");
-                        Console.Write("#Chon: ");
-                        value = Console.ReadLine();
-                    }
-                }
+                // while (true)
+                // {
+                //     if (string.Compare(value, "\n") != 0 || value == "C" || value == "c" || value == "K" || value == "k")
+                //     {
+                //         break;
+                //     }
+                //     else
+                //     {
+                //         Console.WriteLine("- Ky tu ban nhap khong chinh xac ! Vui long nhap lai !");
+                //         Console.Write("#Chon: ");
+                //         value = Console.ReadLine();
+                //     }
+                // }
                 selectChar = value;
             }
         }
@@ -69,10 +69,11 @@ namespace PL_Console
                 Console.WriteLine("==========================================\n");
                 Console.WriteLine("1. Dang nhap he thong");
                 Console.WriteLine("2. Thoat\n");
+                Console.Write("#Chon: ");
+                selectNumber = Console.ReadLine();
                 for (; ; )
                 {
-                    Console.Write("#Chon: ");
-                    selectNumber = Console.ReadLine();
+
                     switch (selectNumber)
                     {
                         case "1":
@@ -83,11 +84,9 @@ namespace PL_Console
                             break;
                         default:
                             Console.WriteLine("- Ky tu ban nhap khong dung ! Vui long thu lai !");
+                            Console.Write("#Chon: ");
+                            selectNumber = Console.ReadLine();
                             break;
-                    }
-                    if (selectNumber == "2")
-                    {
-                        break;
                     }
                 }
             }
@@ -114,7 +113,7 @@ namespace PL_Console
                 ListE.Add(e);
                 if (e != null)
                 {
-                    Menu00();
+                    Menu010();
                     break;
                 }
                 else
@@ -123,7 +122,7 @@ namespace PL_Console
                 }
             }
         }
-        public void Menu00()
+        public void Menu010()
         {
             Console.Clear();
             Console.WriteLine("                         Cua hang sach TG");
@@ -147,18 +146,20 @@ namespace PL_Console
                         break;
                     default:
                         Console.WriteLine("- Ky tu ban nhap khong dung ! Vui long nhap lai !");
+                        Console.Write("#Chon: ");
+                        selectNumber = Console.ReadLine();
                         break;
                 }
             }
         }
+        public EmployeesBL employee = new EmployeesBL();
+        public BooksBL book = new BooksBL();
+        public OrderBL order = new OrderBL();
+        public Orders o = new Orders();
+        public Books b = new Books();
+        public OrderDetails od = new OrderDetails();
         public void Menu011()
         {
-            EmployeesBL employee = new EmployeesBL();
-            BooksBL book = new BooksBL();
-            OrderBL order = new OrderBL();
-            Orders o = new Orders();
-            Books b = new Books();
-            OrderDetails od = new OrderDetails();
             Console.Clear();
             Console.WriteLine("                         Cua hang sach TG");
             Console.WriteLine("=========================================");
@@ -179,18 +180,39 @@ namespace PL_Console
                     Console.WriteLine(b.amount);
                     Console.WriteLine(b.unit_price);
                     Console.WriteLine("\n=========================================");
-                    Console.Write("Ban co muon tiep tuc mua them sach(Co/Khong): ");
+                    Console.Write("Ban co muon tiep tuc mua them sach(C/K): ");
                     selectChar = Console.ReadLine();
                     o.BooksList.Add(od);
-                    if (selectChar == "Co" || selectChar == "co")
+                    for (; ; )
                     {
-                        order.AddOrder(o);
-                    }
-                    else if (selectChar == "Khong" || selectChar == "khong")
-                    {
-                        order.AddOrder(o);
-                        Menu00();
-                        break;
+                        switch (selectChar)
+                        {
+                            case "C":
+                                order.AddOrder(o);
+                                break;
+                            case "c":
+                                order.AddOrder(o);
+                                break;
+                            case "K":
+                                order.AddOrder(o);
+                                Display();
+                                Menu010();
+                                break;
+                            case "k":
+                                order.AddOrder(o);
+                                Display();
+                                Menu010();
+                                break;
+                            default:
+                                Console.WriteLine("- Ky tu ban nhap khong dung ! Vui long nhap lai !");
+                                Console.Write("Ban co muon tiep tuc mua them sach(C/K): ");
+                                selectChar = Console.ReadLine();
+                                break;
+                        }
+                        if(selectChar == "C" || selectChar == "c")
+                        {
+                            break;
+                        }
                     }
                 }
                 else
@@ -198,6 +220,10 @@ namespace PL_Console
                     Console.WriteLine("- Sach khong ton tai ! Vui long nhap lai ID !");
                 }
             }
+        }
+        public void Display()
+        {
+
         }
     }
 }
