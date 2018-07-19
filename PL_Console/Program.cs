@@ -23,7 +23,7 @@ namespace PL_Console
             {
                 while (true)
                 {
-                    if (string.Compare(value, "\n") != 0 || value == "Y" || value == "y" || value == "N" || value == "n")
+                    if (string.Compare(value, "\n") != 0 || value == "Co" || value == "co" || value == "Khong" || value == "khong")
                     {
                         break;
                     }
@@ -70,11 +70,12 @@ namespace PL_Console
                 Books b = new Books();
                 Employees e = new Employees();
                 OrderDetails od = new OrderDetails();
-                List<Books> ListBook = new List<Books>();
-                Console.WriteLine("---Chao mung den voi cua hang sach TG---");
-                Console.WriteLine("=========================================\n");
+                List<OrderDetails> ListOrderDetails = new List<OrderDetails>();
+                Console.Clear();
+                Console.WriteLine("----Chao mung den voi cua hang sach TG----");
+                Console.WriteLine("==========================================\n");
                 Console.WriteLine("1. Dang nhap he thong");
-                Console.WriteLine("2. Exit\n");
+                Console.WriteLine("2. Thoat\n");
                 for (; ; )
                 {
                     Console.Write("#Chon: ");
@@ -82,100 +83,13 @@ namespace PL_Console
                     switch (selectNumber)
                     {
                         case "1":
-                            Console.Clear();
-                            Console.WriteLine("Dang nhap he thong:");
-                            Console.WriteLine("======================================");
-                            for (; ; )
-                            {
-                                Console.Write("-Ten dang nhap: ");
-                                string user = Console.ReadLine();
-                                Console.Write("-Mat khau: ");
-                                string password = Console.ReadLine();
-                                e = employee.GetEmployeeByUserPassword(user, password);
-                                if (e != null)
-                                {
-                                    Console.Clear();
-                                    Console.WriteLine("                       Cua hang sach TG");
-                                    Console.WriteLine("=======================================\n");
-                                    Console.WriteLine("1. Tao hoa don");
-                                    Console.WriteLine("2. Thanh toan");
-                                    Console.WriteLine("3. Dang xuat\n");
-                                    Console.Write("#Chon: ");
-                                    selectNumber = Console.ReadLine();
-                                    for (; ; )
-                                    {
-                                        switch (selectNumber)
-                                        {
-                                            case "1":
-                                                Console.Clear();
-                                                Console.WriteLine("                         Cua hang sach TG");
-                                                Console.WriteLine("=========================================");
-                                                for ( ; ; )
-                                                {
-                                                    int i = 0;
-                                                    i++;
-                                                    Console.Write("- Nhap ID Book: ");
-                                                    od.book.ID_Book = Convert.ToInt32(Console.ReadLine());
-                                                    b = book.GetBookById(od.book.ID_Book);
-                                                    if (b != null)
-                                                    {
-                                                        
-                                                        Console.Write("- Nhap so luong: ");
-                                                        // int quantity = Convert.ToInt32(Console.ReadLine());
-                                                        od.quantity = Convert.ToInt32(Console.ReadLine());                                                        
-                                                        Console.WriteLine(b.amount);
-                                                        Console.WriteLine(b.unit_price);
-                                                        Console.WriteLine("\n=========================================");
-                                                        Console.Write("Ban co muon tiep tuc mua them sach(Y/N): ");
-                                                        selectChar = Console.ReadLine();
-                                                        if (selectChar == "Y" || selectChar == "y")
-                                                        {
-                                                            Console.Clear();
-                                                            ListBook.Add(b);
-                                                        }
-                                                        else if (selectChar == "N" || selectChar == "n")
-                                                        {
-                                                            order.AddOrder(o);
-                                                            break;
-                                                        }
-                                                    }
-                                                    else
-                                                    {
-                                                        Console.WriteLine("- Sach khong ton tai ! Vui long nhap lai ID !");
-                                                    }
-                                                }
-                                                break;
-                                            case "2":
-                                                break;
-                                            case "3":
-                                                Console.WriteLine("---Chao mung den voi cua hang sach TG---");
-                                                Console.WriteLine("=========================================\n");
-                                                Console.WriteLine("1. Dang nhap he thong");
-                                                Console.WriteLine("2. Exit\n");
-                                                break;
-                                            default:
-                                                Console.WriteLine("- Ky tu ban nhap khong dung ! Vui long nhap lai !");
-                                                break;
-                                        }
-                                        break;
-                                    }
-                                    break;
-                                }
-                                else
-                                {
-                                    Console.WriteLine("- Thong tin quy khach vua nhap khong chinh xac ! Vui long nhap lai !");
-                                }
-                            }
+                            Menu01();
                             break;
                         case "2":
                             break;
                         default:
                             Console.WriteLine("- Ky tu ban nhap khong dung ! Vui long thu lai !");
                             break;
-                    }
-                    if (selectNumber == "2")
-                    {
-                        break;
                     }
                 }
             }
@@ -184,6 +98,94 @@ namespace PL_Console
                 Console.WriteLine("- Loi khong xac dinh !!!!");
             }
         }
+        public void Menu01()
+        {
+            Console.Clear();
+            Console.WriteLine("Dang nhap he thong:");
+            Console.WriteLine("======================================");
+            for (; ; )
+            {
+                Console.Write("-Ten dang nhap: ");
+                string user = Console.ReadLine();
+                Console.Write("-Mat khau: ");
+                string password = Console.ReadLine();
+                e = employee.GetEmployeeByUserPassword(user, password);
+                if (e != null)
+                {
+                    Console.Clear();
+                    Console.WriteLine("                         Cua hang sach TG");
+                    Console.WriteLine("=========================================\n");
+                    Console.WriteLine("1. Tao hoa don");
+                    Console.WriteLine("2. Thanh toan");
+                    Console.WriteLine("3. Dang xuat\n");
+                    Console.Write("#Chon: ");
+                    selectNumber = Console.ReadLine();
+                    for (; ; )
+                    {
+                        switch (selectNumber)
+                        {
+                            case "1":
+                                Menu011();
+                                break;
+                            case "2":
+                                break;
+                            case "3":
+                                Console.WriteLine("----Chao mung den voi cua hang sach TG----");
+                                Console.WriteLine("==========================================\n");
+                                Console.WriteLine("1. Dang nhap he thong");
+                                Console.WriteLine("2. Thoat\n");
+                                break;
+                            default:
+                                Console.WriteLine("- Ky tu ban nhap khong dung ! Vui long nhap lai !");
+                                break;
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("- Thong tin quy khach vua nhap khong chinh xac ! Vui long nhap lai !");
+                }
+            }
+        }
+        public void Menu011()
+        {
+            Console.Clear();
+            Console.WriteLine("                         Cua hang sach TG");
+            Console.WriteLine("=========================================");
+                for ( ; ; )
+                {                      
+                    int i = 0;
+                    i++;
+                    Console.Write("- Nhap ID Book: ");
+                    od.book.ID_Book = Convert.ToInt32(Console.ReadLine());                        
+                    b = book.GetBookById(od.book.ID_Book);
+                    if (b != null)
+                    {
+                        Console.Write("- Nhap so luong: ");
+                        int quantity = Convert.ToInt32(Console.ReadLine());
+                        quantity = od.quantity;                            
+                        od.book = b;                                                    
+                        // Console.WriteLine(b.amount);
+                        // Console.WriteLine(b.unit_price);
+                        Console.WriteLine("\n=========================================");
+                        Console.Write("Ban co muon tiep tuc mua them sach(Co/Khong): ");
+                        selectChar = Console.ReadLine();
+                        if (selectChar == "Co" || selectChar == "co")                            
+                        {                                    
+                            Console.Clear();
+                            ListOrderDetails.Add(od);
+                        }
+                        else if (selectChar == "Khong" || selectChar == "khong")
+                        {
+                            order.AddOrder(o);                                
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("- Sach khong ton tai ! Vui long nhap lai ID !");
+                    }
+                }
+        }
     }
-
 }

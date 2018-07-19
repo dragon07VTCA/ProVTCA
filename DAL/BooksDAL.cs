@@ -19,12 +19,13 @@ namespace DAL
             {
                 connection.Open();
             }
-            query = $"select ID_Book, book_title, author, amount, unit_price from Books where id_book='{ID_Book}';";
+            query = $"select ID_Book, book_title, author, amount, unit_price from Books where id_book={ID_Book};";
             MySqlCommand command = new MySqlCommand(query, connection);
             reader = command.ExecuteReader();
             Books book = null;
             if (reader.Read())
             {
+                book = new Books();
                 book = GetBook(reader);
             }
             reader.Close();

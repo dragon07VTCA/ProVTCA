@@ -15,7 +15,7 @@ namespace DAL.Test
             Assert.Null(e.GetEmployeeByUserPassword(user_name, password));
         }
         [Theory]
-        [InlineData("TruongVTCA","VTCA")]
+        [InlineData("1","1")]
         public void TestName1(string user_name, string password)
         {
             EmployeesDAL e = new EmployeesDAL();

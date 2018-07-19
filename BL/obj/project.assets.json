@@ -1610,11 +1610,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\BL\\BL.csproj",
+      "projectUniqueName": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\BL\\BL.csproj",
       "projectName": "BL",
-      "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\BL\\BL.csproj",
+      "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\BL\\BL.csproj",
       "packagesPath": "C:\\Users\\XuanTruong\\.nuget\\packages\\",
-      "outputPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\BL\\obj\\",
+      "outputPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1631,11 +1631,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\Persistence\\Persistence.csproj": {
-              "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\Persistence\\Persistence.csproj"
+            "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\Persistence\\Persistence.csproj": {
+              "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\Persistence\\Persistence.csproj"
             },
-            "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\DAL\\DAL.csproj": {
-              "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\DAL\\DAL.csproj"
+            "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\DAL\\DAL.csproj": {
+              "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\DAL\\DAL.csproj"
             }
           }
         }

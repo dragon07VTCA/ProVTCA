@@ -2128,11 +2128,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\PL_Console\\PL_Console.csproj",
+      "projectUniqueName": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\PL_Console\\PL_Console.csproj",
       "projectName": "PL_Console",
-      "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\PL_Console\\PL_Console.csproj",
+      "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\PL_Console\\PL_Console.csproj",
       "packagesPath": "C:\\Users\\XuanTruong\\.nuget\\packages\\",
-      "outputPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\PL_Console\\obj\\",
+      "outputPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\PL_Console\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -2149,11 +2149,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\BL\\BL.csproj": {
-              "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\BL\\BL.csproj"
+            "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\BL\\BL.csproj": {
+              "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\BL\\BL.csproj"
             },
-            "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\Persistence\\Persistence.csproj": {
-              "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\Persistence\\Persistence.csproj"
+            "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\Persistence\\Persistence.csproj": {
+              "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\Persistence\\Persistence.csproj"
             }
           }
         }
