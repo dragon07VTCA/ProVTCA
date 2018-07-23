@@ -28,6 +28,7 @@ namespace DAL
         internal Employees GetEmployeeByUserPassword(string user_name , string password,MySqlConnection connection)
         {
             query = $"select ID_E, full_name, Phone_number,Address from Employees where User_name='{user_name}' and User_Password='{password}';";
+            
             Employees c = null;
             reader = (new MySqlCommand(query,connection)).ExecuteReader();
             if (reader.Read())

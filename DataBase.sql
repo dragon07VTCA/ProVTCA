@@ -15,22 +15,21 @@ create table Books(
 ID_Book int(11) auto_increment , constraint PK_ID_Book primary key(ID_Book),
 book_title varchar(225) not null,
 author varchar(225) not null,
-unit_price decimal(20,2) default 0,
+unit_price decimal(20,0) default 0,
 amount int(10) not null
 );
 
 create table Orders(
 ID_Order int(11) auto_increment , constraint PK_ID_Order primary key(ID_Order),
 ID_E int(11) , constraint FK_ID_E foreign key(ID_E) references Employees(ID_E),
-ID_Book int(11),
 Creation_Time datetime default now(),
 Note varchar(225)
 );
 
 create table OrderDetails(
-ID_order int(11), constraint FK_ID_Order foreign key(ID_Order) references Orders(ID_Order),
+ID_Order int(11), constraint FK_ID_Order foreign key(ID_Order) references Orders(ID_Order),
 ID_Book int(11), constraint FK_ID_Book foreign key (ID_Book) references Books(ID_book),
-unit_price decimal(20,2) default 0,
+unit_price decimal(20,0) default 0,
 quantity int not null default 1
 );
 
@@ -59,10 +58,10 @@ insert into Employees(full_name,Phone_number,Address,User_name,User_Password)
 values ('Le Truong Giang','0978895541','Ha Noi','GiangVTCA','VTCA'),
       ('Do Xuan Truong' , '0967824628','Ha Noi','1','1');
 insert into Books(book_title,author,unit_price,amount)
-values ('Ngu van','A','12000','100'),
-	   ('Dai so','A','13000','100'),
-       ('Tin hoc','A','11000','100'),
-       ('Tieng anh','A','14000','100'),
-       ('Hinh hoc','A','12000','100'),
-       ('Cong nghe ','A','10000','100'),
-       ('Lich su','A','14000','100');
+values ('SLAM DUNK','Takehiko Inoue','20000','100'),
+	   ('FAIRY TAIL','Mashima Hiro','25000','100'),
+       ('BLEACH','Tite Kubo','30000','100'),
+       ('DEATH NOTE','Tsugumi Ohba','35000','100'),
+       ('DRAGON BALL','Toriyama Akira','40000','100'),
+       ('NARUTO','Kishimoto Masashi','45000','100'),
+       ('ONE PIECE','Eiichiro Oda','50000','100');

@@ -25,15 +25,11 @@ namespace DAL
                 // Nhap du lieu cho bang Order
                 cmd.CommandText = $"insert into Orders(ID_E) values ({order.ID_E.ID_E});";
                 cmd.ExecuteNonQuery();
-        
-                // cmd.Parameters.AddWithValue("@ID_Order", order.ID_Order);
-                // cmd.Parameters.AddWithValue("@ID_E", order.ID_E);
-                // cmd.Parameters.AddWithValue("@Creation_Time", order.creation_time);
                 //Nhập dữ liệu cho bảng OrderDetail
                 for (int i = 0; i < order.BooksList.Count; i++)
                 {
                     cmd.CommandText = $@"insert into OrderDetails(ID_Order,ID_Book,unit_price,quantity) values
-                    (1,
+                    ({order.ID_Order},
                      {order.BooksList[i].book.ID_Book},
                      {order.BooksList[i].quantity * order.BooksList[i].book.unit_price},
                      {order.BooksList[i].quantity})";
@@ -64,7 +60,6 @@ namespace DAL
 
             return order;
         }
-        
     }
 
 }
