@@ -395,11 +395,13 @@ namespace PL_Console
                     Console.WriteLine("-------------------------------------See you again !!!-------------------------------------------------\n");
                     Console.Write("Bam phim bat ky de quay lai.....");
                     Console.ReadKey();
+                    lb = new List<Books>();
                     Menu010();
                     break;
                 }
                 else if (chon == "K" || chon == "k")
                 {
+                    Menu010();
                     break;
                 }
                 else
@@ -407,7 +409,6 @@ namespace PL_Console
                     Console.WriteLine("- Ky ban nhap khong dung ! Vui long nhap lai !");
                 }
             }
-            Menu010();
         }
     }
 }
