@@ -273,7 +273,8 @@ namespace PL_Console
                         else
                         {
                             Console.WriteLine("- So luong ban nhap khong dung ! Vui long nhap lai !");
-                            Console.WriteLine("- Con {0} trong kho !", nsl);
+                            Console.WriteLine("- Tong so quyen trong kho {0}",b.amount);
+                            Console.WriteLine("- Da nhap {0}", nsl);
                         }
                     }
                     Console.WriteLine("\n=========================================\n");
@@ -366,6 +367,7 @@ namespace PL_Console
         {
             if (lb.Count == 0)
             {
+                Console.Clear();
                 Console.Write("- Chua tao don hang ! An phim bat ky de quay lai ....");
                 Console.ReadKey();
                 Menu010();
