@@ -224,7 +224,7 @@ namespace PL_Console
                 {
                     string IdB;
                     int IdBook;
-                    Console.Write("- Nhap ID Book: ");
+                    Console.Write("- Nhap ID Book: MN");
                     IdB = Console.ReadLine();
                     if (int.TryParse(IdB, out IdBook))
                     {
@@ -278,10 +278,11 @@ namespace PL_Console
                             Console.WriteLine("-------------------------------------------------------------------------------------------------------");
                             Console.WriteLine("Danh sach sach duoc chon:\n");
                             Console.WriteLine("-------------------------------------------------------------------------------------------------------");
-                            Console.WriteLine("Ma sach  | Ten sach                | Ten tac gia              | SL   |");
+                            Console.WriteLine(" Ma sach  | Ten sach                | Ten tac gia              | SL   |");
+                            Console.WriteLine(" -------    --------                  -----------                --    ");
                             for (i = 0; i < lb.Count; i++)
                             {
-                                string idbook = lb[i].ID_Book + new string(' ', 9 - lb[i].ID_Book.ToString().Length);
+                                string idbook =" MN" + lb[i].ID_Book + new string(' ', 7 - lb[i].ID_Book.ToString().Length);
                                 string bookname = " " + lb[i].book_title + new string(' ', 24 - lb[i].book_title.Length);
                                 string author = " " + lb[i].author + new string(' ', 25 - lb[i].author.Length);
                                 // string dongia = " " + lb[i].unit_price + new string(' ', 12 - lb[i].unit_price.ToString().Length);
@@ -343,12 +344,13 @@ namespace PL_Console
             Console.WriteLine("                                                                                 Cua hang sach the gioi\n");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------");
             Console.WriteLine("                                             DON HANG SACH                                             ");
-            Console.WriteLine("Ma don hang: {0}", o.ID_Order);
+            Console.WriteLine("Ma don hang: BLACK{0}", o.ID_Order);
             Console.WriteLine("-------------------------------------------------------------------------------------------------------");
             Console.WriteLine(" Ma sach  | Ten sach                | Ten tac gia              | Don gia     | SL   | Thanh tien       ");
+            Console.WriteLine(" -------    --------                  -----------                -------       --     ----------       ");
             for (i = 0; i < lb.Count; i++)
             {
-                string idbook = " " + lb[i].ID_Book + new string(' ', 9 - lb[i].ID_Book.ToString().Length);
+                string idbook = " MN" + lb[i].ID_Book + new string(' ', 7 - lb[i].ID_Book.ToString().Length);
                 string bookname = " " + lb[i].book_title + new string(' ', 24 - lb[i].book_title.Length);
                 string author = " " + lb[i].author + new string(' ', 25 - lb[i].author.Length);
                 string dongia = " " + lb[i].unit_price + new string(' ', 9 - lb[i].unit_price.ToString().Length) + "VND";
@@ -374,14 +376,15 @@ namespace PL_Console
                     Console.WriteLine("-------------------------------------------------------------------------------------------------------");
                     Console.WriteLine("                                                                            Ngay ban: "+ new string(' ',17 -(o.creation_time.Day + "-" + o.creation_time.Month + "-" + o.creation_time.Year + " " + o.creation_time.Hour + ":" + o.creation_time.Minute).ToString().Length) + o.creation_time.Day + "-" + o.creation_time.Month + "-" + o.creation_time.Year + " " + o.creation_time.Hour + ":" + o.creation_time.Minute);
                     Console.WriteLine("                                       ***HOA DON BAN HANG***                                          ");
-                    Console.WriteLine("- Ma : {0}", o.ID_Order);
+                    Console.WriteLine("- Ma : DRAGON{0}", o.ID_Order);
                     Console.WriteLine("- Nguoi ban: " + ListE[0].full_name);
                     Console.WriteLine("-------------------------------------------------------------------------------------------------------");
                     Console.WriteLine(" Ma sach  | Ten sach                | Ten tac gia              | Don gia     | SL   | Thanh tien       ");
+                    Console.WriteLine(" -------    --------                  -----------                -------       --     ----------       ");
                     for (i = 0; i < lb.Count; i++)
                     {
                         
-                        string idbook = " " + lb[i].ID_Book + new string(' ', 9 - lb[i].ID_Book.ToString().Length);
+                        string idbook = " MN" + lb[i].ID_Book + new string(' ', 7 - lb[i].ID_Book.ToString().Length);
                         string bookname = " " + lb[i].book_title + new string(' ', 24 - lb[i].book_title.Length);
                         string author = " " + lb[i].author + new string(' ', 25 - lb[i].author.Length);
                         string dongia = " " + lb[i].unit_price + new string(' ', 9 - lb[i].unit_price.ToString().Length) + "VND";
