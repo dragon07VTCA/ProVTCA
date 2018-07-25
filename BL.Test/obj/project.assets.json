@@ -6107,11 +6107,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\BL.Test\\BL.Test.csproj",
+      "projectUniqueName": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\BL.Test\\BL.Test.csproj",
       "projectName": "BL.Test",
-      "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\BL.Test\\BL.Test.csproj",
+      "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\BL.Test\\BL.Test.csproj",
       "packagesPath": "C:\\Users\\XuanTruong\\.nuget\\packages\\",
-      "outputPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\BL.Test\\obj\\",
+      "outputPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\BL.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6128,8 +6128,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\BL\\BL.csproj": {
-              "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\Project\\BL\\BL.csproj"
+            "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\BL\\BL.csproj": {
+              "projectPath": "D:\\Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}\\LapTrinh\\Project\\Code\\ProVTCA\\BL\\BL.csproj"
             }
           }
         }

@@ -21,6 +21,7 @@ namespace DAL.Test
         {
             Orders or = new Orders();
             Employees e = new Employees();
+            or.ID_Order = 1;
             e.ID_E = 1;
             or.ID_E = e;
             or.creation_time = DateTime.Now;
