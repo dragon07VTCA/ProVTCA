@@ -11,30 +11,34 @@ namespace DAL.Test
     {
         private OrderDAL order = new OrderDAL();
         [Fact]
-        public void TestName()
+        public void TestAddOrder_Null()
         {
             Orders or = new Orders();
             Assert.Null(order.AddOrder(or));
         }
         [Fact]
-        public void TestOrder()
+        public void TestAddOrder_NotNull()
         {
             Orders or = new Orders();
             Employees e = new Employees();
-            or.ID_Order = 1;
+            OrderDetails od = new OrderDetails();
+            or.BooksList = new List<OrderDetails>();
             e.ID_E = 1;
             or.ID_E = e;
-            or.creation_time = DateTime.Now;
-            or.BooksList = new List<OrderDetails>();
-            OrderDetails orde = new OrderDetails();
-            Books bo = new Books();
-            bo.ID_Book = 1;
-            orde.book.ID_Book = bo.ID_Book;
-            bo.unit_price = 10;
-            orde.quantity = 3;
-            orde.book.unit_price = bo.unit_price;
-            or.BooksList.Add(orde);
+            Books b = new Books();
+            b.ID_Book = 1;
+            b.unit_price = 10;
+            od.book.ID_Book = b.ID_Book;
+            od.book.unit_price = b.unit_price;
+            od.quantity = 10;
+            or.BooksList.Add(od);
             Assert.NotNull(order.AddOrder(or));
+        }
+
+        [Fact]
+        public void TestGetIDOrder()
+        {
+            Assert.Equal(1, order.GetIDOrder());
         }
 
     }

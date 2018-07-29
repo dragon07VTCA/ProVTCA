@@ -18,6 +18,7 @@ namespace PL_Console
     public class Menu
     {
         /////////////////////////////////////////////////////////////////////////////////////////////
+        le = new List<Employees>();
         private string selectChar;
         public string _selectChar
         {
@@ -26,7 +27,7 @@ namespace PL_Console
             {
                 while (true)
                 {
-                    if (string.Compare(value, "\n") != 0 || value == "C" || value == "c" || value == "K" || value == "k" || value == "07101999")
+                    if (string.Compare(value, "\n") != 0 || value == "C" || value == "c" || value == "K" || value == "k")
                     {
                         break;
                     }
@@ -131,7 +132,7 @@ namespace PL_Console
         }
         /////////////////////////////////////////////////////////////////////////////////////////////
 
-        public List<Employees> ListE = new List<Employees>();
+        public Employees le;
 
         public void Menu01()
         {
@@ -148,7 +149,7 @@ namespace PL_Console
 
                 string password = Password();
                 e = employee.GetEmployeeByUserPassword(user, password);
-                ListE.Add(e);
+                le.Add(e);
                 if (e != null)
                 {
                     Menu010();
@@ -166,8 +167,8 @@ namespace PL_Console
             Console.Clear();
             Console.WriteLine("                         Cua hang sach TG");
             Console.WriteLine("=========================================\n");
-            Console.WriteLine("1. Tao hoa don");
-            Console.WriteLine("2. Thanh toan");
+            Console.WriteLine("1. Tao don hang");
+            Console.WriteLine("2. Lich su giao dich");
             Console.WriteLine("3. Dang xuat\n");
             Console.Write("#Chon: ");
             selectNumber = Console.ReadLine();
@@ -218,7 +219,7 @@ namespace PL_Console
             {
                 Books b = new Books();
                 OrderDetails od = new OrderDetails();
-                o.ID_E = ListE[0];
+                o.ID_E.ID_E = le[0].ID_E;
                 o.ID_Order = i;
                 for (; ; )
                 {
@@ -229,6 +230,13 @@ namespace PL_Console
                     if (int.TryParse(IdB, out IdBook))
                     {
                         b.ID_Book = IdBook;
+                        b = book.GetBookById(b.ID_Book);
+                        
+                        string id =" " + b.ID_Book + new string(' ', 9 - b.ID_Book.ToString().Length);
+                        string name =" " + b.book_title + new string(' ', 24 - b.book_title.Length);
+                        string author =" " + b.author + new string(' ', 25 - b.author.Length);
+                        string amount =" " + string.Format("{0:0,0}",b.unit_price) + new string(' ', 9 - string.Format("{0:0,0}", b.unit_price).ToString().Length) + "VND";
+                        Console.WriteLine(id + "|" + name + "|" + author + "|" + amount + "|");
                         break;
                     }
                     else
@@ -395,7 +403,7 @@ namespace PL_Console
                     {
                         Console.Write("-Nhap so tien cua khach hang: ");
                         price = Console.ReadLine();
-                        if(TryParse(price) >= Convert.ToInt32(a))
+                        if (TryParse(price) >= Convert.ToInt32(a))
                         {
                             break;
                         }
@@ -408,12 +416,12 @@ namespace PL_Console
                     decimal b = 0;
                     o.creation_time = DateTime.Now;
                     Console.WriteLine("=======================================================================================================");
-                    Console.WriteLine("                                      Cua hang sach the gioi                                           \n");
+                    Console.WriteLine("                                       Cua hang sach the gioi                                          \n");
                     Console.WriteLine("-------------------------------------------------------------------------------------------------------");
                     Console.WriteLine("                                                                            Ngay ban: " + new string(' ', 17 - (o.creation_time.Day + "-" + o.creation_time.Month + "-" + o.creation_time.Year + " " + o.creation_time.Hour + ":" + o.creation_time.Minute).ToString().Length) + o.creation_time.Day + "-" + o.creation_time.Month + "-" + o.creation_time.Year + " " + o.creation_time.Hour + ":" + o.creation_time.Minute);
                     Console.WriteLine("                                       ***HOA DON BAN HANG***                                          ");
                     Console.WriteLine("- Ma : DRAGON{0}", o.ID_Order);
-                    Console.WriteLine("- Nguoi ban: " + ListE[0].full_name);
+                    Console.WriteLine("- Nguoi ban: " + le[0].full_name);
                     Console.WriteLine("-------------------------------------------------------------------------------------------------------");
                     Console.WriteLine(" Ma sach  | Ten sach                | Ten tac gia              | Don gia     | SL   | Thanh tien       ");
                     Console.WriteLine(" -------    --------                  -----------                -------       --     ----------       ");
@@ -423,16 +431,16 @@ namespace PL_Console
                         string idbook = " MN" + lb[i].ID_Book + new string(' ', 7 - lb[i].ID_Book.ToString().Length);
                         string bookname = " " + lb[i].book_title + new string(' ', 24 - lb[i].book_title.Length);
                         string author = " " + lb[i].author + new string(' ', 25 - lb[i].author.Length);
-                        string dongia = " " + string.Format("{0:0,0}",lb[i].unit_price) + new string(' ', 9 - string.Format("{0:0,0}",lb[i].unit_price).ToString().Length) + "VND";
+                        string dongia = " " + string.Format("{0:0,0}", lb[i].unit_price) + new string(' ', 9 - string.Format("{0:0,0}", lb[i].unit_price).ToString().Length) + "VND";
                         string sl = " " + o.BooksList[i].quantity + new string(' ', 5 - o.BooksList[i].quantity.ToString().Length);
-                        string tt = " " + string.Format("{0:0,0}",o.BooksList[i].quantity * lb[i].unit_price) + new string(' ', 14 - string.Format("{0:0,0}",o.BooksList[i].quantity * lb[i].unit_price).ToString().Length) + "VND";
+                        string tt = " " + string.Format("{0:0,0}", o.BooksList[i].quantity * lb[i].unit_price) + new string(' ', 14 - string.Format("{0:0,0}", o.BooksList[i].quantity * lb[i].unit_price).ToString().Length) + "VND";
                         Console.WriteLine(idbook + "|" + bookname + "|" + author + "|" + dongia + "|" + sl + "|" + tt + "|");
                         b = b + lb[i].unit_price * o.BooksList[i].quantity;
                     }
                     Console.WriteLine("-------------------------------------------------------------------------------------------------------\n");
-                    Console.WriteLine("                                                                    Tong tien: " + string.Format("{0:0,0}",b) + new string(' ', 20 - string.Format("{0:0,0}",b).ToString().Length) + "VND");
-                    Console.WriteLine("                                                              Tien khach hang: " + string.Format("{0:0,0}",Convert.ToDecimal(price)) + new string(' ', 20 - string.Format("{0:0,0}",Convert.ToDecimal(price)).ToString().Length) + "VND");
-                    Console.WriteLine("                                                                    Hoan tien: " + string.Format("{0:0,0}",Convert.ToDecimal(price) - b) + new string(' ', 20 - string.Format("{0:0,0}",Convert.ToDecimal(price) - b).ToString().Length) + "VND");
+                    Console.WriteLine("                                                            + Tong tien      : " + string.Format("{0:0,0}", b) + new string(' ', 20 - string.Format("{0:0,0}", b).ToString().Length) + "VND");
+                    Console.WriteLine("                                                            + Tien khach hang: " + string.Format("{0:0,0}", Convert.ToDecimal(price)) + new string(' ', 20 - string.Format("{0:0,0}", Convert.ToDecimal(price)).ToString().Length) + "VND");
+                    Console.WriteLine("                                                            + Hoan tien      : " + string.Format("{0:0,0}", Convert.ToDecimal(price) - b) + new string(' ', 20 - string.Format("{0:0,0}", Convert.ToDecimal(price) - b).ToString().Length) + "VND");
                     Console.WriteLine("---------------------------------------Hen gap lai !!!-------------------------------------------------\n");
                     Console.Write("Bam phim bat ky de quay lai.....");
                     Console.ReadKey();

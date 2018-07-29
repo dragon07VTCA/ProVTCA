@@ -25,11 +25,12 @@ namespace DAL
                 // Nhap du lieu cho bang Order
                 cmd.CommandText = $"insert into Orders(ID_E) values ({order.ID_E.ID_E});";
                 cmd.ExecuteNonQuery();
+                int ID_Order = GetIDOrder();
                 //Nhập dữ liệu cho bảng OrderDetail
                 for (int i = 0; i < order.BooksList.Count; i++)
                 {
                     cmd.CommandText = $@"insert into OrderDetails(ID_Order,ID_Book,unit_price,quantity) values
-                    ({order.ID_Order},
+                    ({ID_Order},
                      {order.BooksList[i].book.ID_Book},
                      {order.BooksList[i].quantity * order.BooksList[i].book.unit_price},
                      {order.BooksList[i].quantity})";
@@ -49,7 +50,7 @@ namespace DAL
             catch
             {
                 trans.Rollback();
-               return null;
+                return null;
             }
             finally
             {
@@ -59,6 +60,23 @@ namespace DAL
             }
 
             return order;
+        }
+
+        public int GetIDOrder()
+        {
+            int result = 0;
+            string query = "select ID_Order from Orders order by ID_Order desc limit 1;";
+            MySqlConnection connection = DbConfiguration.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand(query , connection);
+            using (MySqlDataReader reader = cmd.ExecuteReader())
+            {
+                if(reader.Read())
+                {
+                    result = reader.GetInt32("ID_Order");
+                }
+            }
+            connection.Close();
+            return result;
         }
     }
 

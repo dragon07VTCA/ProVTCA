@@ -27,8 +27,8 @@ Note varchar(225)
 );
 
 create table OrderDetails(
-ID_Order int(11), constraint FK_ID_Order foreign key(ID_Order) references Orders(ID_Order),
-ID_Book int(11), constraint FK_ID_Book foreign key (ID_Book) references Books(ID_book),
+ID_Order int(11),constraint PK_ID_Order_Book primary key(ID_Order,ID_Book), constraint FK_ID_Order foreign key(ID_Order) references Orders(ID_Order),
+ID_Book int(11),constraint FK_ID_Book foreign key (ID_Book) references Books(ID_book),
 unit_price decimal(20,0) default 0,
 quantity int not null default 1
 );
