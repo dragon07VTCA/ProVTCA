@@ -38,6 +38,22 @@ namespace DAL
             reader.Close();
             return c;
         }
+        public Employees GetEmployeeByID(int ID_E)
+        {
+            if(connection.State == System.Data.ConnectionState.Closed)
+            {
+                connection.Open();
+            }
+            query = $"select ID_E, full_name, Phone_number,Address from Employees where ID_E = {ID_E};";
+            reader = (new MySqlCommand(query,connection)).ExecuteReader();
+            Employees c = null;
+            if (reader.Read())
+            {
+                c = GetEmployee(reader);
+            }
+            reader.Close();
+            return c;
+        }
         private Employees GetEmployee(MySqlDataReader reader)
         {
             Employees c = new Employees();

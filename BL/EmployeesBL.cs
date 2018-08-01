@@ -12,5 +12,9 @@ namespace BL
         {
             return E_BL.GetEmployeeByUserPassword(user_name , password);
         }
+        public Employees GetEmployeeByID(int ID_E)
+        {
+            return E_BL.GetEmployeeByID(ID_E);
+        }
     }
 }

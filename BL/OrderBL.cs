@@ -12,5 +12,18 @@ namespace BL
         {
             return O_BL.AddOrder(order);
         }
+        public int GetOrder()
+        {
+            return O_BL.GetIDOrder();
+        }
+        public List<Orders> GetAllOrderInDay()
+        {
+            
+            return O_BL.GetAllOrderInDay();
+        }
+        public List<Orders> GetOrderByID(int ID_Order)
+        {
+            return O_BL.GetOrderByID(ID_Order);
+        }
     }
 }

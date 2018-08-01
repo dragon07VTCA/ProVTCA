@@ -23,9 +23,9 @@ namespace DAL
             try
             {
                 // Nhap du lieu cho bang Order
-                cmd.CommandText = $"insert into Orders(ID_E) values ({order.ID_E.ID_E});";
+                cmd.CommandText = $"insert into Orders(ID_E) value ({order.ID_E.ID_E});";
                 cmd.ExecuteNonQuery();
-                int ID_Order = GetIDOrder();
+                int ID_Order = GetIDOrder() + 1;
                 //Nhập dữ liệu cho bảng OrderDetail
                 for (int i = 0; i < order.BooksList.Count; i++)
                 {
@@ -67,10 +67,10 @@ namespace DAL
             int result = 0;
             string query = "select ID_Order from Orders order by ID_Order desc limit 1;";
             MySqlConnection connection = DbConfiguration.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query , connection);
+            MySqlCommand cmd = new MySqlCommand(query, connection);
             using (MySqlDataReader reader = cmd.ExecuteReader())
             {
-                if(reader.Read())
+                if (reader.Read())
                 {
                     result = reader.GetInt32("ID_Order");
                 }
@@ -78,6 +78,84 @@ namespace DAL
             connection.Close();
             return result;
         }
+        private string query;
+        public MySqlConnection connection = DbConfiguration.OpenConnection();
+        public MySqlDataReader reader;
+        public List<Orders> GetAllOrderInDay()
+        {
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                connection.Open();
+            }
+            query = $@"select * from Orders where day(Creation_Time) + month(Creation_Time) + year(Creation_Time) = '{DateTime.Now.Day}'
+                                                                                                                  + '{DateTime.Now.Month}' 
+                                                                                                                  + '{DateTime.Now.Year}';";
+            reader = (new MySqlCommand(query,connection)).ExecuteReader();
+            List<Orders> lo = new List<Orders>();
+            Orders o = null;
+            while (reader.Read())
+            {
+                o = new Orders();
+                o = GetOrder0(reader);
+                lo.Add(o);
+            }
+            if(lo == null || lo.Count == 0)
+            {
+                reader.Close();
+                return null;
+            }
+            reader.Close();
+            return lo;
+        }
+        private Orders GetOrder0(MySqlDataReader reader)
+        {
+            Orders o = new Orders();
+            o.ID_E = new Employees();
+            o.ID_Order = reader.GetInt32("ID_Order");
+            o.ID_E.ID_E = reader.GetInt32("ID_E");
+            o.creation_time = reader.GetDateTime("creation_time");
+            return o;
+        }
+        public List<Orders> GetOrderByID(int ID_Order)
+        {
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                connection.Open();
+            }
+            query = $"select od.ID_Order , o.ID_E , o.Creation_Time , od.ID_Book , od.unit_price , od.quantity from orders o join OrderDetails od on o.ID_Order = od.ID_Order and od.ID_Order = {ID_Order} and day(o.Creation_Time) + month(o.Creation_Time) + year(o.Creation_Time) = '{DateTime.Now.Day}' + '{DateTime.Now.Month}' + '{DateTime.Now.Year}';";
+            reader = (new MySqlCommand(query, connection)).ExecuteReader();
+            List<Orders> lo = new List<Orders>();
+            Orders o = null;
+            while (reader.Read())
+            {
+                o = new Orders();
+                o = GetOrder(reader);
+                lo.Add(o);
+            }
+            if(lo == null || lo.Count == 0)
+            {
+                reader.Close();
+                return null;
+            }
+            reader.Close();
+            return lo;
+        }
+        private Orders GetOrder(MySqlDataReader reader)
+        {
+            Orders o = new Orders();
+            OrderDetails od = new OrderDetails();
+            o.ID_E = new Employees();
+            o.BooksList = new List<OrderDetails>();
+            o.ID_Order = reader.GetInt32("ID_Order");
+            o.ID_E.ID_E = reader.GetInt32("ID_E");
+            o.creation_time = reader.GetDateTime("creation_time");
+            od.book.ID_Book = reader.GetInt32("ID_Book");
+            od.book.unit_price = reader.GetDecimal("unit_price");
+            od.quantity = reader.GetInt32("quantity");
+            o.BooksList.Add(od);
+            return o;
+        }
+
     }
 
 }

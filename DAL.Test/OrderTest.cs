@@ -20,16 +20,13 @@ namespace DAL.Test
         public void TestAddOrder_NotNull()
         {
             Orders or = new Orders();
-            Employees e = new Employees();
+            or.ID_E = new Employees();
             OrderDetails od = new OrderDetails();
             or.BooksList = new List<OrderDetails>();
-            e.ID_E = 1;
-            or.ID_E = e;
-            Books b = new Books();
-            b.ID_Book = 1;
-            b.unit_price = 10;
-            od.book.ID_Book = b.ID_Book;
-            od.book.unit_price = b.unit_price;
+            or.ID_E.ID_E = 1;
+            od.book = new Books();
+            od.book.ID_Book= 1;
+            od.book.unit_price = 10;
             od.quantity = 10;
             or.BooksList.Add(od);
             Assert.NotNull(order.AddOrder(or));
@@ -38,7 +35,13 @@ namespace DAL.Test
         [Fact]
         public void TestGetIDOrder()
         {
-            Assert.Equal(1, order.GetIDOrder());
+            Assert.NotEqual(0, order.GetIDOrder());
+        }
+        [Fact]
+        public void TestGetOrderID()
+        {
+            int ID_Order = 2;
+            Assert.NotNull(order.GetOrderByID(ID_Order));
         }
 
     }

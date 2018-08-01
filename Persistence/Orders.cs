@@ -51,4 +51,9 @@ namespace Persistence
             return ID_Order.GetHashCode();
         }
     }
+    public class Thanhtoan
+    {
+        public decimal Tienthanhtoan{get; set;}
+        public decimal Hoantien{get;set;}
+    }
 }

@@ -10,7 +10,7 @@ Address varchar(225) not null,
 User_name varchar(225) not null,
 User_Password varchar(225) not null
 );
-
+select * from employees;
 create table Books(
 ID_Book int(11) auto_increment , constraint PK_ID_Book primary key(ID_Book),
 book_title varchar(225) not null,
@@ -22,8 +22,7 @@ amount int(10) not null
 create table Orders(
 ID_Order int(11) auto_increment , constraint PK_ID_Order primary key(ID_Order),
 ID_E int(11) , constraint FK_ID_E foreign key(ID_E) references Employees(ID_E),
-Creation_Time datetime default now(),
-Note varchar(225)
+Creation_Time datetime default now()
 );
 
 create table OrderDetails(
@@ -55,8 +54,8 @@ create trigger tg_CheckAmount
 delimiter ;
 
 insert into Employees(full_name,Phone_number,Address,User_name,User_Password)
-values ('Le Truong Giang','0978895541','Ha Noi','GiangVTCA','VTCA'),
-      ('Do Xuan Truong' , '0967824628','Ha Noi','1','1');
+values ('Lê Trường Giang','0978895541','Ha Noi','GiangVTCA','VTCA'),
+      ('Đỗ Xuân Trường' , '0967824628','Ha Noi','1','1');
 insert into Books(book_title,author,unit_price,amount)
 values ('SLAM DUNK','Takehiko Inoue','20000','100'),
 	   ('FAIRY TAIL','Mashima Hiro','25000','100'),
