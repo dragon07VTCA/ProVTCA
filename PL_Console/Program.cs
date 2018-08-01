@@ -418,8 +418,10 @@ namespace PL_Console
             }
         }
         /////////////////////////////////////////////////////////////////////////////////////////////
+        public int _i = 0;
         public void Menu012()
         {
+            _i = 0;
             if (lb.Count == 0)
             {
                 Console.Clear();
@@ -433,7 +435,8 @@ namespace PL_Console
             Console.WriteLine("                                        CỬA HÀNG SÁCH THẾ GIỚI                                         \n");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------");
             Console.WriteLine("                                             ĐƠN HÀNG SÁCH                                             ");
-            Console.WriteLine(" Mã đơn hàng: OD{0}", order.GetOrder());
+            Console.WriteLine(" Mã đơn hàng: OD{0}", order.GetOrder() + 1);
+            _i = order.GetOrder();
             Console.WriteLine("-------------------------------------------------------------------------------------------------------");
             Console.WriteLine(" Mã sách  | Tên sách                | Tên tác giả              | Đơn giá     | SL   | Thành tiền       ");
             Console.WriteLine(" -------    --------                  -----------                -------       --     ----------       ");
@@ -444,7 +447,7 @@ namespace PL_Console
                 string author = " " + lb[i].author + new string(' ', 25 - lb[i].author.Length);
                 string dongia = " " + string.Format("{0:0,0}", lb[i].unit_price) + new string(' ', 9 - string.Format("{0:0,0}", lb[i].unit_price).ToString().Length) + "VNĐ";
                 string sl = " " + o.BooksList[i].quantity + new string(' ', 5 - o.BooksList[i].quantity.ToString().Length);
-                string tt = " " + string.Format("{0:0,0}", o.BooksList[i].quantity * lb[i].unit_price) + new string(' ', 14 - string.Format("{0:0,0}", o.BooksList[i].quantity * lb[i].unit_price).ToString().Length) + "VNĐ";
+                string tt = " " + string.Format("{0:0,0}", o.BooksList[i].quantity * lb[i].unit_price) + new string(' ', 13 - string.Format("{0:0,0}", o.BooksList[i].quantity * lb[i].unit_price).ToString().Length) + "VNĐ";
                 Console.WriteLine(idbook + "|" + bookname + "|" + author + "|" + dongia + "|" + sl + "|" + tt + "|");
                 a = a + lb[i].unit_price * o.BooksList[i].quantity;
             }
@@ -481,7 +484,7 @@ namespace PL_Console
                     Console.WriteLine("-------------------------------------------------------------------------------------------------------");
                     Console.WriteLine("                                                                         Ngày bán: " + new string(' ', 20 - string.Format("{0:dd/MM/yyyy hh:mm tt}",o.creation_time).ToString().Length) + string.Format("{0:dd/MM/yyyy hh:mm tt}",o.creation_time));
                     Console.WriteLine("                                       ***HÓA ĐƠN BÁN HÀNG***                                          ");
-                    Console.WriteLine("- Mã hóa đơn : BL{0}", o.ID_Order);
+                    Console.WriteLine("- Mã hóa đơn : BL{0}", _i + 1);
                     Console.WriteLine("- Người bán  : " + e.full_name);
                     Console.WriteLine("-------------------------------------------------------------------------------------------------------");
                     Console.WriteLine(" Mã sách  | Tên sách                | Tên tác giả              | Đơn giá     | SL   | Thành tiền       ");
@@ -494,7 +497,7 @@ namespace PL_Console
                         string author = " " + lb[i].author + new string(' ', 25 - lb[i].author.Length);
                         string dongia = " " + string.Format("{0:0,0}", lb[i].unit_price) + new string(' ', 9 - string.Format("{0:0,0}", lb[i].unit_price).ToString().Length) + "VNĐ";
                         string sl = " " + o.BooksList[i].quantity + new string(' ', 5 - o.BooksList[i].quantity.ToString().Length);
-                        string tt = " " + string.Format("{0:0,0}", o.BooksList[i].quantity * lb[i].unit_price) + new string(' ', 14 - string.Format("{0:0,0}", o.BooksList[i].quantity * lb[i].unit_price).ToString().Length) + "VNĐ";
+                        string tt = " " + string.Format("{0:0,0}", o.BooksList[i].quantity * lb[i].unit_price) + new string(' ', 13 - string.Format("{0:0,0}", o.BooksList[i].quantity * lb[i].unit_price).ToString().Length) + "VNĐ";
                         Console.WriteLine(idbook + "|" + bookname + "|" + author + "|" + dongia + "|" + sl + "|" + tt + "|");
                         b = b + lb[i].unit_price * o.BooksList[i].quantity;
                     }
